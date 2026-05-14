@@ -1,0 +1,49 @@
+{
+  "entities": {
+    "Inquiry": {
+      "title": "Inquiry",
+      "description": "A lead submission from the contact or quotation form.",
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Full name of the prospect."
+        },
+        "email": {
+          "type": "string",
+          "format": "email",
+          "description": "Contact email address."
+        },
+        "phone": {
+          "type": "string",
+          "description": "Contact phone number (optional)."
+        },
+        "service": {
+          "type": "string",
+          "description": "The specific service the prospect is interested in."
+        },
+        "message": {
+          "type": "string",
+          "description": "Detailed project vision or message."
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Server-side timestamp of submission."
+        },
+        "status": {
+          "type": "string",
+          "enum": ["new", "reviewed", "archived"],
+          "description": "Internal processing status."
+        }
+      },
+      "required": ["name", "email", "service", "message", "createdAt", "status"]
+    }
+  },
+  "firestore": {
+    "inquiries/{inquiryId}": {
+      "schema": "Inquiry",
+      "description": "Collection of all public inquiries."
+    }
+  }
+}

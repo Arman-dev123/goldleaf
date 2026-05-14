@@ -1,0 +1,12 @@
+{
+  "name": "Goldleaf Ghostwriting",
+  "description": "A premium ghostwriting and publishing agency dedicated to crafting elite books and memoirs with a luxury publishing feel.",
+  "requestFramePermissions": [
+    "geolocation"
+  ],
+  "majorCapabilities": [
+    "SEO optimized",
+    "Lead generation",
+    "Premium design"
+  ]
+}
